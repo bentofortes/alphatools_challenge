@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  front:
+    build: ./front
+
+  back:
+    build: ./back
