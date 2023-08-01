@@ -42,7 +42,7 @@ def get_prices(request):
       elif new_entry.price < float(i["min"]):
         request.session["email_sent_at"] = datetime.now(tz=pytz.UTC).isoformat()
         send_email(
-          greater=True,
+          greater=False,
           tunnel=[float(i["max"]),float(i["max"])],
           data=new_entry
         )
